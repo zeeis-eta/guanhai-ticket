@@ -17,7 +17,7 @@ app.post("/guanhai_ticket", function (req, res) {
   const { sceneStr, expireSeconds } = req.body
   request({
     method: 'POST',
-    url: 'http://api.weixin.qq.com/cgi-bin/qrcode/create',
+    url: 'http://api.weixin.qq.com/cgi-bin/qrcode/create?from_appid=wx1c096fbf07724f12',
     body: JSON.stringify({
       action_name: 'QR_STR_SCENE',
       expire_seconds: expireSeconds || 3600,
